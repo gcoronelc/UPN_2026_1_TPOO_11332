@@ -9,7 +9,7 @@
 - Horario: 
   * Lunes de 07:30 a 09:00 Horas
   * Martes de 07:30 a 10:40 Horas
-- Inicio: 25.MAR.2026
+- Inicio: 23.MAR.2026
 - Duración: 16 Semanas
 
 
