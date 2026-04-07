@@ -4,4 +4,14 @@ PCS11 = AvaProyecto (60%)   + ActRS (40%)
 
 Primeros grupos: 2, 3, 4 y 8
 
+Grupo 1: Proyecto 3
+Grupo 2: Proyecto 9
+Grupo 3: Proyecto 11
+Grupo 4: Proyecto 1
+Grupo 5: Proyecto 6
+Grupo 6: Proyecto 
+Grupo 7: Proyecto 2
+Grupo 8: Proyecto 5
+
+
 
