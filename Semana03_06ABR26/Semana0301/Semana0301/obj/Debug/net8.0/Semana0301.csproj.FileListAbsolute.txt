@@ -1,0 +1,15 @@
+C:\Users\UPN\Desktop\SEMANA5\Semana0301\Semana0301\bin\Debug\net8.0\Semana0301.exe
+C:\Users\UPN\Desktop\SEMANA5\Semana0301\Semana0301\bin\Debug\net8.0\Semana0301.deps.json
+C:\Users\UPN\Desktop\SEMANA5\Semana0301\Semana0301\bin\Debug\net8.0\Semana0301.runtimeconfig.json
+C:\Users\UPN\Desktop\SEMANA5\Semana0301\Semana0301\bin\Debug\net8.0\Semana0301.dll
+C:\Users\UPN\Desktop\SEMANA5\Semana0301\Semana0301\bin\Debug\net8.0\Semana0301.pdb
+C:\Users\UPN\Desktop\SEMANA5\Semana0301\Semana0301\obj\Debug\net8.0\Semana0301.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\UPN\Desktop\SEMANA5\Semana0301\Semana0301\obj\Debug\net8.0\Semana0301.AssemblyInfoInputs.cache
+C:\Users\UPN\Desktop\SEMANA5\Semana0301\Semana0301\obj\Debug\net8.0\Semana0301.AssemblyInfo.cs
+C:\Users\UPN\Desktop\SEMANA5\Semana0301\Semana0301\obj\Debug\net8.0\Semana0301.csproj.CoreCompileInputs.cache
+C:\Users\UPN\Desktop\SEMANA5\Semana0301\Semana0301\obj\Debug\net8.0\Semana0301.sourcelink.json
+C:\Users\UPN\Desktop\SEMANA5\Semana0301\Semana0301\obj\Debug\net8.0\Semana0301.dll
+C:\Users\UPN\Desktop\SEMANA5\Semana0301\Semana0301\obj\Debug\net8.0\refint\Semana0301.dll
+C:\Users\UPN\Desktop\SEMANA5\Semana0301\Semana0301\obj\Debug\net8.0\Semana0301.pdb
+C:\Users\UPN\Desktop\SEMANA5\Semana0301\Semana0301\obj\Debug\net8.0\Semana0301.genruntimeconfig.cache
+C:\Users\UPN\Desktop\SEMANA5\Semana0301\Semana0301\obj\Debug\net8.0\ref\Semana0301.dll

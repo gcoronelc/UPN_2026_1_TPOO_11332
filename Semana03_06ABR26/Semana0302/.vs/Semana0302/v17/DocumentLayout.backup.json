@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\UPN\\Desktop\\SEMANA5\\Semana0302\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8AE48940-8080-4B41-A1BF-5CC25E72A56E}|Semana0302\\Semana0302.csproj|c:\\users\\upn\\desktop\\semana5\\semana0302\\semana0302\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8AE48940-8080-4B41-A1BF-5CC25E72A56E}|Semana0302\\Semana0302.csproj|solutionrelative:semana0302\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AE48940-8080-4B41-A1BF-5CC25E72A56E}|Semana0302\\Semana0302.csproj|c:\\users\\upn\\desktop\\semana5\\semana0302\\semana0302\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AE48940-8080-4B41-A1BF-5CC25E72A56E}|Semana0302\\Semana0302.csproj|solutionrelative:semana0302\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AE48940-8080-4B41-A1BF-5CC25E72A56E}|Semana0302\\Semana0302.csproj|c:\\users\\upn\\desktop\\semana5\\semana0302\\semana0302\\nodo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AE48940-8080-4B41-A1BF-5CC25E72A56E}|Semana0302\\Semana0302.csproj|solutionrelative:semana0302\\nodo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AE48940-8080-4B41-A1BF-5CC25E72A56E}|Semana0302\\Semana0302.csproj|c:\\users\\upn\\desktop\\semana5\\semana0302\\semana0302\\listadoble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AE48940-8080-4B41-A1BF-5CC25E72A56E}|Semana0302\\Semana0302.csproj|solutionrelative:semana0302\\listadoble.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\UPN\\Desktop\\SEMANA5\\Semana0302\\Semana0302\\Form1.cs",
+              "RelativeDocumentMoniker": "Semana0302\\Form1.cs",
+              "ToolTip": "C:\\Users\\UPN\\Desktop\\SEMANA5\\Semana0302\\Semana0302\\Form1.cs*",
+              "RelativeToolTip": "Semana0302\\Form1.cs*",
+              "ViewState": "AgIAABkAAAAAAAAAAAAiwCEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T18:44:34.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\UPN\\Desktop\\SEMANA5\\Semana0302\\Semana0302\\Form1.cs",
+              "RelativeDocumentMoniker": "Semana0302\\Form1.cs",
+              "ToolTip": "C:\\Users\\UPN\\Desktop\\SEMANA5\\Semana0302\\Semana0302\\Form1.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "Semana0302\\Form1.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T18:41:19.224Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ListaDoble.cs",
+              "DocumentMoniker": "C:\\Users\\UPN\\Desktop\\SEMANA5\\Semana0302\\Semana0302\\ListaDoble.cs",
+              "RelativeDocumentMoniker": "Semana0302\\ListaDoble.cs",
+              "ToolTip": "C:\\Users\\UPN\\Desktop\\SEMANA5\\Semana0302\\Semana0302\\ListaDoble.cs",
+              "RelativeToolTip": "Semana0302\\ListaDoble.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAqwCwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T18:31:50.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Nodo.cs",
+              "DocumentMoniker": "C:\\Users\\UPN\\Desktop\\SEMANA5\\Semana0302\\Semana0302\\Nodo.cs",
+              "RelativeDocumentMoniker": "Semana0302\\Nodo.cs",
+              "ToolTip": "C:\\Users\\UPN\\Desktop\\SEMANA5\\Semana0302\\Semana0302\\Nodo.cs",
+              "RelativeToolTip": "Semana0302\\Nodo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T18:28:05.339Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
