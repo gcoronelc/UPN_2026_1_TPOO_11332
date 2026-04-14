@@ -20,6 +20,8 @@ public class Ejemplo01 {
             System.out.println(object);
         }
         
+        Random bean = (Random) lista.get(3); // Casting explicito
+        System.out.println(bean.nextInt());
         
     }
     
