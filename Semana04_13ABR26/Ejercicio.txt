@@ -1,0 +1,22 @@
+Proyecto
+=================================
+Gestionar una lista de contactos.
+
+Solución
+=================================
+Requerimientos funcionales:
+1.- Agregar nuevo contacto
+2.- Modificar un contacto
+3.- Eliminar un contacto
+4.- buscar un contacto
+5.- Ordenar contactos
+6.- 
+
+
+
+
+
+
+
+
+
