@@ -1,0 +1,5 @@
+Cual de estos requerimientos se pueden considerar que generan valor, sustenta tu respuesta: 
+a.- Registrar una venta.
+b.- CRUD de una tabla, por ejemplo empleados, clientes.
+c.- Login (Ingreso al sistema.
+d.- Consulta/Reporte de ventas por trimestre.
