@@ -1,0 +1,11 @@
+Instalar SQL Server Developer:
+https://youtu.be/a0ln_5dtCow
+
+Habilitar conexión remota:
+https://youtu.be/wVNPjDeZOhA
+
+sql server management studio:
+https://youtu.be/QzJ0cSb2-EU
+
+
+
