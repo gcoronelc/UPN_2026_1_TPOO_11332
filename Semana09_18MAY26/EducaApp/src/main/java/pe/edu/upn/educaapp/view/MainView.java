@@ -1,5 +1,7 @@
 package pe.edu.upn.educaapp.view;
 
+import javax.swing.JInternalFrame;
+
 public class MainView extends javax.swing.JFrame {
 
     public MainView() {
@@ -20,6 +22,12 @@ public class MainView extends javax.swing.JFrame {
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         exitMenuItem = new javax.swing.JMenuItem();
+        menuProcesos = new javax.swing.JMenu();
+        menuProcesosMatricular = new javax.swing.JMenuItem();
+        menuConsultas = new javax.swing.JMenu();
+        menuConsultasMatriculados = new javax.swing.JMenuItem();
+        menuReportes = new javax.swing.JMenu();
+        menuReporteIngresos = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("EDUCA APP");
@@ -33,6 +41,30 @@ public class MainView extends javax.swing.JFrame {
         fileMenu.add(exitMenuItem);
 
         menuBar.add(fileMenu);
+
+        menuProcesos.setText("Procesos");
+
+        menuProcesosMatricular.setText("Matricular");
+        menuProcesosMatricular.addActionListener(this::menuProcesosMatricularActionPerformed);
+        menuProcesos.add(menuProcesosMatricular);
+
+        menuBar.add(menuProcesos);
+
+        menuConsultas.setText("Consultas");
+
+        menuConsultasMatriculados.setText("Matriculados");
+        menuConsultasMatriculados.addActionListener(this::menuConsultasMatriculadosActionPerformed);
+        menuConsultas.add(menuConsultasMatriculados);
+
+        menuBar.add(menuConsultas);
+
+        menuReportes.setText("Reportes");
+
+        menuReporteIngresos.setText("Ingresos");
+        menuReporteIngresos.addActionListener(this::menuReporteIngresosActionPerformed);
+        menuReportes.add(menuReporteIngresos);
+
+        menuBar.add(menuReportes);
 
         setJMenuBar(menuBar);
 
@@ -53,6 +85,24 @@ public class MainView extends javax.swing.JFrame {
     private void exitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitMenuItemActionPerformed
         System.exit(0);
     }//GEN-LAST:event_exitMenuItemActionPerformed
+
+    private void menuProcesosMatricularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuProcesosMatricularActionPerformed
+        JInternalFrame view = new ProcesoMatricularView();
+        desktopPane.add(view);
+        view.setVisible(true);
+    }//GEN-LAST:event_menuProcesosMatricularActionPerformed
+
+    private void menuConsultasMatriculadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuConsultasMatriculadosActionPerformed
+        JInternalFrame view = new ConsultaMatriculadosView();
+        desktopPane.add(view);
+        view.setVisible(true);
+    }//GEN-LAST:event_menuConsultasMatriculadosActionPerformed
+
+    private void menuReporteIngresosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuReporteIngresosActionPerformed
+        JInternalFrame view = new ReporteIngresosView();
+        desktopPane.add(view);
+        view.setVisible(true);
+    }//GEN-LAST:event_menuReporteIngresosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -94,6 +144,12 @@ public class MainView extends javax.swing.JFrame {
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenuBar menuBar;
+    private javax.swing.JMenu menuConsultas;
+    private javax.swing.JMenuItem menuConsultasMatriculados;
+    private javax.swing.JMenu menuProcesos;
+    private javax.swing.JMenuItem menuProcesosMatricular;
+    private javax.swing.JMenuItem menuReporteIngresos;
+    private javax.swing.JMenu menuReportes;
     // End of variables declaration//GEN-END:variables
 
 }
