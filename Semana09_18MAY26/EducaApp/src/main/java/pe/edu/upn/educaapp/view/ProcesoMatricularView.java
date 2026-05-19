@@ -192,6 +192,7 @@ public class ProcesoMatricularView extends javax.swing.JInternalFrame {
             txtCuotas.setText("");
             txtCurso.requestFocus();
         } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e.getMessage());
         }
     }//GEN-LAST:event_btnGrabarActionPerformed
 

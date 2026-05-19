@@ -26,7 +26,7 @@ public class ProcesoService {
             cn = AccesoDB.getConnection();
             cn.setAutoCommit(false);
             // Validaciones
-            // Lo vemos despues
+            precio = obtenerPrecio(cn, bean.getIdCurso());
 
             // Registrar matricula
             sql = """
@@ -76,6 +76,22 @@ public class ProcesoService {
             } catch (Exception e) {
             }
         }
+    }
+
+    private double obtenerPrecio(Connection cn, int idCurso) throws SQLException {
+        String sql = "select cur_precio precio from curso where cur_id=?";
+        PreparedStatement pstm = cn.prepareStatement(sql);
+        pstm.setInt(1, idCurso);
+        ResultSet rs = pstm.executeQuery();
+        if(!rs.next()){
+            rs.close();
+            pstm.close();
+            throw new SQLException("Curso no existe!!");
+        }
+        double precio = rs.getDouble("precio");
+        rs.close();
+        pstm.close();
+        return precio;
     }
 
 }
