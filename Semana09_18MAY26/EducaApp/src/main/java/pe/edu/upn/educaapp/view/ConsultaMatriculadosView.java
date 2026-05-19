@@ -1,13 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
- */
 package pe.edu.upn.educaapp.view;
 
-/**
- *
- * @author UPN
- */
+import java.util.List;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import pe.edu.upn.educaapp.controller.ConsultaController;
+import pe.edu.upn.educaapp.dto.AlumnoMatDto;
+
 public class ConsultaMatriculadosView extends javax.swing.JInternalFrame {
 
     /**
@@ -15,6 +13,10 @@ public class ConsultaMatriculadosView extends javax.swing.JInternalFrame {
      */
     public ConsultaMatriculadosView() {
         initComponents();
+        try {
+            this.setMaximum(true);
+        } catch (Exception e) {
+        }
     }
 
     /**
@@ -32,7 +34,7 @@ public class ConsultaMatriculadosView extends javax.swing.JInternalFrame {
         btnConsultar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblResultado = new javax.swing.JTable();
 
         setIconifiable(true);
         setMaximizable(true);
@@ -47,6 +49,7 @@ public class ConsultaMatriculadosView extends javax.swing.JInternalFrame {
 
         btnConsultar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnConsultar.setText("Consultar");
+        btnConsultar.addActionListener(this::btnConsultarActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -78,7 +81,7 @@ public class ConsultaMatriculadosView extends javax.swing.JInternalFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "RESULTADO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.ABOVE_TOP, new java.awt.Font("Segoe UI", 1, 18), new java.awt.Color(0, 51, 204))); // NOI18N
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblResultado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -86,10 +89,26 @@ public class ConsultaMatriculadosView extends javax.swing.JInternalFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID", "NOMBRE", "TELEFONO", "TIPO"
             }
-        ));
-        jScrollPane1.setViewportView(jTable1);
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tblResultado.getTableHeader().setReorderingAllowed(false);
+        jScrollPane1.setViewportView(tblResultado);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -132,6 +151,29 @@ public class ConsultaMatriculadosView extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarActionPerformed
+        try {
+            // Dato
+            int idCurso = Integer.parseInt(txtIdCurso.getText());
+            // Proceso
+            ConsultaController controller = new ConsultaController();
+            List<AlumnoMatDto> lista = controller.matriculadosPorCurso(idCurso);
+            // Reporte
+            DefaultTableModel tabla;
+            tabla = (DefaultTableModel) tblResultado.getModel();
+            tabla.setRowCount(0); // Elimina las filas actuales
+            for (AlumnoMatDto bean : lista) {
+                Object[] rowData = {
+                    bean.getId(), bean.getNombre(),
+                    bean.getTelefono(), bean.getTipo()
+                };
+                tabla.addRow(rowData);
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(rootPane, e.getMessage());
+        }
+    }//GEN-LAST:event_btnConsultarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnConsultar;
@@ -139,7 +181,7 @@ public class ConsultaMatriculadosView extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tblResultado;
     private javax.swing.JTextField txtIdCurso;
     // End of variables declaration//GEN-END:variables
 }
