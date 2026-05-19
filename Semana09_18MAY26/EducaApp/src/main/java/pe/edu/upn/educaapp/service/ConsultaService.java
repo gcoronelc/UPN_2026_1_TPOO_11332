@@ -9,6 +9,11 @@ import java.util.List;
 import pe.edu.upn.educaapp.db.AccesoDB;
 import pe.edu.upn.educaapp.dto.AlumnoMatDto;
 
+/**
+ * En esta clase se deben programar todas las consultas.
+ * 
+ * @author UPN
+ */
 public class ConsultaService {
 
 
