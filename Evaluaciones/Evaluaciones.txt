@@ -2,6 +2,8 @@ T3 = PCS06 (10%) + PCS11 (20%) + PCS13 (70%)
 
 PCS11 = AvaProyecto (60%)   + ActRS (40%)
 
+Nota EF = EF (70%) + NotaOracle (30%) 
+
 Primeros grupos: 2, 3, 4 y 8
 
 Grupo 1: Proyecto 3
