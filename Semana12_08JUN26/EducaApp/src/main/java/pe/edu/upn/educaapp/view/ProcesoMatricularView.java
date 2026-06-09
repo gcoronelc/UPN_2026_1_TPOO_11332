@@ -1,21 +1,40 @@
 package pe.edu.upn.educaapp.view;
 
+import java.util.List;
 import javax.swing.JOptionPane;
 import pe.edu.upn.educaapp.controller.ProcesoController;
+import pe.edu.upn.educaapp.dto.ComboDto;
 import pe.edu.upn.educaapp.dto.MatriculaDto;
 
 public class ProcesoMatricularView extends javax.swing.JInternalFrame {
 
+    private ProcesoController controller;
+    
     /**
      * Creates new form ProcesoMatricularView
      */
     public ProcesoMatricularView() {
         initComponents();
-                try {
+        try {
             this.setMaximum(true);
         } catch (Exception e) {
         }
+        controller = new ProcesoController();
+        llenarComboCurso();
     }
+    
+    private void llenarComboCurso(){
+        try {
+            cboCurso.removeAllItems();
+            List<ComboDto> cursos = controller.cursosDisponibles();
+            for (ComboDto curso : cursos) {
+                cboCurso.addItem(curso);
+            }
+            cboCurso.setSelectedIndex(-1);
+        } catch (Exception e) {
+        }
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,13 +50,13 @@ public class ProcesoMatricularView extends javax.swing.JInternalFrame {
         btnCancelar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        txtCurso = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        txtAlumno = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        txtTipo = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        txtCuotas = new javax.swing.JTextField();
+        cboCurso = new javax.swing.JComboBox<>();
+        cboAlumno = new javax.swing.JComboBox<>();
+        cboTipo = new javax.swing.JComboBox<>();
+        cboCuotas = new javax.swing.JComboBox<>();
 
         setIconifiable(true);
         setMaximizable(true);
@@ -79,22 +98,25 @@ public class ProcesoMatricularView extends javax.swing.JInternalFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Curso");
 
-        txtCurso.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setText("Alumno");
-
-        txtAlumno.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setText("Tipo");
 
-        txtTipo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setText("Cuotas");
 
-        txtCuotas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cboCurso.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cboCurso.addActionListener(this::cboCursoActionPerformed);
+
+        cboAlumno.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        cboTipo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cboTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "REGULAR", "MEDIABECA", "BECA" }));
+
+        cboCuotas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cboCuotas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3" }));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -102,24 +124,24 @@ public class ProcesoMatricularView extends javax.swing.JInternalFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cboCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cboAlumno, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cboTipo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtCuotas, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(353, Short.MAX_VALUE))
+                        .addComponent(cboCuotas, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -127,20 +149,20 @@ public class ProcesoMatricularView extends javax.swing.JInternalFrame {
                 .addGap(15, 15, 15)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cboCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cboAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cboTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCuotas, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(197, Short.MAX_VALUE))
+                    .addComponent(cboCuotas, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(201, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -173,42 +195,62 @@ public class ProcesoMatricularView extends javax.swing.JInternalFrame {
 
     private void btnGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrabarActionPerformed
         try {
+            // Datos iniciales
+            ComboDto curso = (ComboDto) cboCurso.getSelectedItem();
+            ComboDto alumno = (ComboDto) cboAlumno.getSelectedItem();
+            String tipo = cboTipo.getSelectedItem().toString();
+            int cuotas = Integer.parseInt(cboCuotas.getSelectedItem().toString());
             // Datos
             MatriculaDto bean = new MatriculaDto();
-            bean.setIdCurso(Integer.parseInt(txtCurso.getText()));
-            bean.setIdAlumno(Integer.parseInt(txtAlumno.getText()));
-            bean.setCuotas(Integer.parseInt(txtCuotas.getText()));
-            bean.setTipo(txtTipo.getText());
+            bean.setIdCurso(curso.getId());
+            bean.setIdAlumno(alumno.getId());
+            bean.setTipo(tipo);
+            bean.setCuotas(cuotas);
             // Empleado
             bean.setIdEmpleado(2); // Por mientras
             // Proceso
-            ProcesoController controller = new ProcesoController();
             controller.matricular(bean);
             // Reporte
             JOptionPane.showMessageDialog(rootPane, "Matricula registrada correctamente!!");
-            txtCurso.setText("");
-            txtAlumno.setText("");
-            txtTipo.setText("");
-            txtCuotas.setText("");
-            txtCurso.requestFocus();
+            //txtCurso.setText("");
+            //txtAlumno.setText("");
+            //txtTipo.setText("");
+            //txtCuotas.setText("");
+            //txtCurso.requestFocus();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(rootPane, e.getMessage());
         }
     }//GEN-LAST:event_btnGrabarActionPerformed
 
+    private void cboCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboCursoActionPerformed
+        cboAlumno.removeAllItems();
+        if(cboCurso.getSelectedIndex()==-1){
+            return;
+        }
+        try {
+            ComboDto curso = (ComboDto) cboCurso.getSelectedItem();
+            List<ComboDto> alumnos = controller.alumnosDisponibles(curso.getId());
+            for (ComboDto alumno : alumnos) {
+                cboAlumno.addItem(alumno);
+            }
+            cboAlumno.setSelectedIndex(-1);
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_cboCursoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnGrabar;
+    private javax.swing.JComboBox<ComboDto> cboAlumno;
+    private javax.swing.JComboBox<String> cboCuotas;
+    private javax.swing.JComboBox<ComboDto> cboCurso;
+    private javax.swing.JComboBox<String> cboTipo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField txtAlumno;
-    private javax.swing.JTextField txtCuotas;
-    private javax.swing.JTextField txtCurso;
-    private javax.swing.JTextField txtTipo;
     // End of variables declaration//GEN-END:variables
 }
