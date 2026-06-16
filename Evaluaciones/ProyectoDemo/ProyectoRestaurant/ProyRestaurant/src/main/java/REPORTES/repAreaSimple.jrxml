@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="repAreaSimple" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="91c2566e-38b0-4b1f-9591-df642e2a9e0d">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="conexion.jrdax"/>
+	<queryString language="SQL">
+		<![CDATA[select * from  "Area"]]>
+	</queryString>
+	<field name="areaID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="areaID"/>
+		<property name="com.jaspersoft.studio.field.label" value="areaID"/>
+	</field>
+	<field name="descripArea" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="descripArea"/>
+		<property name="com.jaspersoft.studio.field.label" value="descripArea"/>
+	</field>
+	<sortField name="areaID" order="Descending"/>
+	<sortField name="descripArea" order="Descending"/>
+	<group name="areaID">
+		<groupExpression><![CDATA[$F{areaID}]]></groupExpression>
+	</group>
+	<group name="descripArea">
+		<groupExpression><![CDATA[$F{descripArea}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<textField>
+				<reportElement x="190" y="20" width="160" height="30" forecolor="#0011FF" uuid="ab06ea06-9c3a-4dc4-b200-97bc640ffcd2"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA["REPORTE AREA"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="130" y="0" width="100" height="30" uuid="76674ad0-b87c-4434-85a8-795c6edb4393">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="80e14897-438c-49f1-ae43-9a930221d922"/>
+				</reportElement>
+				<text><![CDATA[areaID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="100" height="30" uuid="99759c74-085c-41b2-b380-2e0ecd7a6378">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="36c1d041-ba52-4e12-84f7-d37bd8cb9f04"/>
+				</reportElement>
+				<text><![CDATA[descripArea]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="60" splitType="Stretch">
+			<textField>
+				<reportElement x="130" y="0" width="100" height="30" uuid="01d19154-23e0-4ec5-a410-55d4ed8f579d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="80e14897-438c-49f1-ae43-9a930221d922"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{areaID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="100" height="30" uuid="67a5a1e5-5540-48f4-b250-e277d2b2127d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="36c1d041-ba52-4e12-84f7-d37bd8cb9f04"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{descripArea}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="repRolSimple" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="21e66e64-0298-4067-865b-b205a77ba07a">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="conexion.jrdax"/>
+	<queryString language="SQL">
+		<![CDATA[select * from  "Rol"]]>
+	</queryString>
+	<field name="rolID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="rolID"/>
+		<property name="com.jaspersoft.studio.field.label" value="rolID"/>
+	</field>
+	<field name="descripRol" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="descripRol"/>
+		<property name="com.jaspersoft.studio.field.label" value="descripRol"/>
+	</field>
+	<sortField name="rolID" order="Descending"/>
+	<sortField name="descripRol" order="Descending"/>
+	<group name="rolID">
+		<groupExpression><![CDATA[$F{rolID}]]></groupExpression>
+	</group>
+	<group name="descripRol">
+		<groupExpression><![CDATA[$F{descripRol}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<textField>
+				<reportElement x="200" y="20" width="200" height="30" forecolor="#1500FF" uuid="d086c581-02ff-4bc7-a176-9bd958e79f1d"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA["REPORTE ROL"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="0" width="100" height="30" uuid="ef434397-e0d5-4a28-b729-c3be78a01cd2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="537aea2b-fe0e-4a85-9e60-8dbc2dd51828"/>
+				</reportElement>
+				<text><![CDATA[rolID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="0" width="100" height="30" uuid="91ae4e8d-c4f0-4d3f-aaf8-50ed57f9d999">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a391b080-2f98-4583-a9f1-8ce659ee0a8b"/>
+				</reportElement>
+				<text><![CDATA[descripRol]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="180" y="0" width="100" height="30" uuid="bebd997c-390b-402e-9442-9c6c7c2eecf9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="537aea2b-fe0e-4a85-9e60-8dbc2dd51828"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{rolID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="0" width="100" height="30" uuid="3c1eb697-dfeb-4b16-a69e-beeb61c0d4be">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a391b080-2f98-4583-a9f1-8ce659ee0a8b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{descripRol}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

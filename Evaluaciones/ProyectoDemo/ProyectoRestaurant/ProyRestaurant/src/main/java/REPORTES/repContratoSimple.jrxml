@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="repContratoSimple" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c798adcf-d749-4e3c-bded-312ef36141ff">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="conexion.jrdax"/>
+	<queryString language="SQL">
+		<![CDATA[select * from  "Contrato"]]>
+	</queryString>
+	<field name="contratoID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="contratoID"/>
+		<property name="com.jaspersoft.studio.field.label" value="contratoID"/>
+	</field>
+	<field name="empleadoID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="empleadoID"/>
+		<property name="com.jaspersoft.studio.field.label" value="empleadoID"/>
+	</field>
+	<field name="rolID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="rolID"/>
+		<property name="com.jaspersoft.studio.field.label" value="rolID"/>
+	</field>
+	<field name="areaID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="areaID"/>
+		<property name="com.jaspersoft.studio.field.label" value="areaID"/>
+	</field>
+	<field name="fechaIni" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fechaIni"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaIni"/>
+	</field>
+	<field name="fechaFin" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fechaFin"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaFin"/>
+	</field>
+	<field name="estado" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="estado"/>
+		<property name="com.jaspersoft.studio.field.label" value="estado"/>
+	</field>
+	<field name="sueldo" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="sueldo"/>
+		<property name="com.jaspersoft.studio.field.label" value="sueldo"/>
+	</field>
+	<sortField name="contratoID" order="Descending"/>
+	<sortField name="empleadoID" order="Descending"/>
+	<sortField name="rolID" order="Descending"/>
+	<sortField name="areaID" order="Descending"/>
+	<sortField name="fechaIni" order="Descending"/>
+	<sortField name="fechaFin" order="Descending"/>
+	<sortField name="estado" order="Descending"/>
+	<sortField name="sueldo" order="Descending"/>
+	<group name="contratoID">
+		<groupExpression><![CDATA[$F{contratoID}]]></groupExpression>
+	</group>
+	<group name="empleadoID">
+		<groupExpression><![CDATA[$F{empleadoID}]]></groupExpression>
+	</group>
+	<group name="rolID">
+		<groupExpression><![CDATA[$F{rolID}]]></groupExpression>
+	</group>
+	<group name="areaID">
+		<groupExpression><![CDATA[$F{areaID}]]></groupExpression>
+	</group>
+	<group name="fechaIni">
+		<groupExpression><![CDATA[$F{fechaIni}]]></groupExpression>
+	</group>
+	<group name="fechaFin">
+		<groupExpression><![CDATA[$F{fechaFin}]]></groupExpression>
+	</group>
+	<group name="estado">
+		<groupExpression><![CDATA[$F{estado}]]></groupExpression>
+	</group>
+	<group name="sueldo">
+		<groupExpression><![CDATA[$F{sueldo}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="180" y="40" width="220" height="30" forecolor="#0400FF" uuid="cc8c11c8-e42b-4254-8e03-4023a4d55191"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA["REPORTE CONTRATO"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="56" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="0" width="70" height="30" uuid="229ba707-debb-4b6f-ab1c-1580eee4b198">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8f0bbc1d-8509-49df-8f84-f4085e7d3ea9"/>
+				</reportElement>
+				<text><![CDATA[contratoID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="0" width="90" height="30" uuid="2f860176-b78a-4ca1-8d5d-9aff2f0c9c1f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="da73dc4e-58ed-48bc-b00c-e4d2990653d0"/>
+				</reportElement>
+				<text><![CDATA[empleadoID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="0" width="80" height="30" uuid="0671a6d4-9d63-4bd0-865f-71bdad25310e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="92cd27f2-431d-4e6f-82ad-ae120c633703"/>
+				</reportElement>
+				<text><![CDATA[rolID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="90" height="30" uuid="9d5fd7c9-2b29-4065-9896-833d7253c7c5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="094b2c8e-acca-470a-ad49-5590fcdcb8c6"/>
+				</reportElement>
+				<text><![CDATA[fechaIni]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="90" height="30" uuid="cc98ebd9-08bb-4ab5-8216-d0a2c9270584">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="941a1dad-4e7d-4748-9217-57fc9b7cf618"/>
+				</reportElement>
+				<text><![CDATA[fechaFin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="0" width="70" height="30" uuid="5b1e080a-720a-43ab-8b3d-e9d8be855ef1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="65dd7ffd-e29c-4450-9452-27827dbca81f"/>
+				</reportElement>
+				<text><![CDATA[sueldo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="52" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="0" width="70" height="30" uuid="5a1cb5d0-4992-40a1-8727-897f75088020">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8f0bbc1d-8509-49df-8f84-f4085e7d3ea9"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{contratoID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="0" width="90" height="30" uuid="9185dcf0-b997-4ec6-a68c-4b60c99c72a1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="da73dc4e-58ed-48bc-b00c-e4d2990653d0"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{empleadoID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="0" width="80" height="30" uuid="326cc375-2b06-49ab-b11a-692e6a1bd8c6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="92cd27f2-431d-4e6f-82ad-ae120c633703"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{rolID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="90" height="30" uuid="b3124b1a-615a-4d48-9294-630d129358d8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="094b2c8e-acca-470a-ad49-5590fcdcb8c6"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fechaIni}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="90" height="30" uuid="9da8d418-8b1e-4471-859e-69240fece5f4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="941a1dad-4e7d-4748-9217-57fc9b7cf618"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fechaFin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="0" width="70" height="30" uuid="7b77ec57-09f9-436f-8c79-050d2f797618">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="65dd7ffd-e29c-4450-9452-27827dbca81f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{sueldo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

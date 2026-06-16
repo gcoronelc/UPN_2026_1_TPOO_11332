@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporTblCruzProd" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1a82e7c7-5658-47f7-b74c-e516fae87c74">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="conexion.jrdax"/>
+	<style name="Crosstab_CH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CG" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CT" mode="Opaque" backcolor="#005FB3">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="restaurante" uuid="ac8b01a1-59b4-49f4-b244-34ad27dc40e5">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="conexion.jrdax"/>
+		<queryString language="SQL">
+			<![CDATA[select  "Producto"."descripProducto" ,  "Producto"."idTipProducto" 
+from  "Producto"]]>
+		</queryString>
+		<field name="descripProducto" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="descripProducto"/>
+			<property name="com.jaspersoft.studio.field.label" value="descripProducto"/>
+		</field>
+		<field name="idTipProducto" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="idTipProducto"/>
+			<property name="com.jaspersoft.studio.field.label" value="idTipProducto"/>
+		</field>
+		<group name="descripProducto">
+			<groupExpression><![CDATA[$F{descripProducto}]]></groupExpression>
+		</group>
+		<group name="idTipProducto">
+			<groupExpression><![CDATA[$F{idTipProducto}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="restauranteProductoTipProd" uuid="f66800d5-47fc-438c-a63a-967a0cd30bab">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="conexion.jrdax"/>
+		<queryString language="SQL">
+			<![CDATA[select  "Producto"."descripProducto" ,  "Producto"."idTipProducto" 
+from  "Producto"]]>
+		</queryString>
+		<field name="descripProducto" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="descripProducto"/>
+			<property name="com.jaspersoft.studio.field.label" value="descripProducto"/>
+		</field>
+		<field name="idTipProducto" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="idTipProducto"/>
+			<property name="com.jaspersoft.studio.field.label" value="idTipProducto"/>
+		</field>
+		<group name="descripProducto">
+			<groupExpression><![CDATA[$F{descripProducto}]]></groupExpression>
+		</group>
+		<group name="idTipProducto">
+			<groupExpression><![CDATA[$F{idTipProducto}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="tablaProductoTipo" uuid="5da364bc-29fe-4195-9fe1-9636ecaf4ae1">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="conexion.jrdax"/>
+		<queryString language="SQL">
+			<![CDATA[select  "Producto"."descripProducto" ,  "TipInsumo".descripcion 
+from  "Producto" inner join  "TipInsumo" on  "Producto"."idTipProducto"= "TipInsumo"."idTipInsumo"  ]]>
+		</queryString>
+		<field name="descripProducto" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="descripProducto"/>
+			<property name="com.jaspersoft.studio.field.label" value="descripProducto"/>
+		</field>
+		<field name="descripcion" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="descripcion"/>
+			<property name="com.jaspersoft.studio.field.label" value="descripcion"/>
+		</field>
+		<group name="descripcion">
+			<groupExpression><![CDATA[$F{descripcion}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="tablasProductoYTipo" uuid="a6d22cc5-3e8f-44c0-bc0c-d8460a487be3">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="conexion.jrdax"/>
+		<queryString language="SQL">
+			<![CDATA[select  "Producto"."descripProducto" ,   "TipProducto".descripcion 
+from  "Producto" inner join  "TipProducto"   on  "Producto"."idTipProducto"=  "TipProducto"."idTipProducto"]]>
+		</queryString>
+		<field name="descripProducto" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="descripProducto"/>
+			<property name="com.jaspersoft.studio.field.label" value="descripProducto"/>
+		</field>
+		<field name="descripcion" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="descripcion"/>
+			<property name="com.jaspersoft.studio.field.label" value="descripcion"/>
+		</field>
+		<group name="descripcion">
+			<groupExpression><![CDATA[$F{descripcion}]]></groupExpression>
+		</group>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[select  "Producto"."descripProducto" ,   "TipProducto".descripcion 
+from  "Producto" inner join  "TipProducto"   on  "Producto"."idTipProducto"=  "TipProducto"."idTipProducto" ]]>
+	</queryString>
+	<field name="descripProducto" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="descripProducto"/>
+		<property name="com.jaspersoft.studio.field.label" value="descripProducto"/>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="descripcion"/>
+		<property name="com.jaspersoft.studio.field.label" value="descripcion"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<textField>
+				<reportElement x="160" y="24" width="250" height="30" forecolor="#0313FF" uuid="e47857b3-6ad8-4593-a911-2dff0ff004de"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA["TABLA PRODUCTO Y TIPO"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="25" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="72" splitType="Stretch">
+			<crosstab>
+				<reportElement x="180" y="0" width="180" height="70" uuid="636a0811-236f-4dce-8a7b-e146198f84f2">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.crosstab.style.header" value="Crosstab_CH"/>
+					<property name="com.jaspersoft.studio.crosstab.style.group" value="Crosstab_CG"/>
+					<property name="com.jaspersoft.studio.crosstab.style.total" value="Crosstab_CT"/>
+					<property name="com.jaspersoft.studio.crosstab.style.detail" value="Crosstab_CD"/>
+				</reportElement>
+				<crosstabDataset>
+					<dataset>
+						<datasetRun subDataset="tablasProductoYTipo" uuid="56746bcf-3993-403c-ac2d-4c6ce9346726">
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+					</dataset>
+				</crosstabDataset>
+				<rowGroup name="descripProducto" width="60" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{descripProducto}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents mode="Opaque" style="Crosstab_CH">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="20" uuid="917ff8df-f05e-4e07-a430-65d0630f2ac8"/>
+								<textFieldExpression><![CDATA[$V{descripProducto}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents mode="Opaque" style="Crosstab_CT">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="3b5093f2-48a0-47b2-8970-48c278d89761"/>
+								<text><![CDATA[Total descripProducto]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<columnGroup name="descripcion" height="20" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{descripcion}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents mode="Opaque" style="Crosstab_CH">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="20" uuid="150b8baa-5321-485a-b7b0-48843247ce28"/>
+								<textFieldExpression><![CDATA[$V{descripcion}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents mode="Opaque" style="Crosstab_CT">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="9f011c34-d4ec-4c02-9a12-de0116238d36"/>
+								<text><![CDATA[Total descripcion]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<measure name="descripcion_COUNT_MEASURE" class="java.lang.Integer" calculation="Count">
+					<measureExpression><![CDATA[$V{descripcion_COUNT}]]></measureExpression>
+				</measure>
+				<crosstabCell width="60" height="20">
+					<cellContents mode="Opaque" style="Crosstab_CD">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" uuid="b5fe7d5f-8716-4814-bb17-c5bed644c211"/>
+							<textFieldExpression><![CDATA[$V{descripcion_COUNT_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" columnTotalGroup="descripcion">
+					<cellContents mode="Opaque" style="Crosstab_CT">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="49859c3e-5e3e-4ecb-9cf9-4d73c4f37775"/>
+							<textFieldExpression><![CDATA[$V{descripcion_COUNT_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="descripProducto">
+					<cellContents mode="Opaque" style="Crosstab_CT">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="1f2f71c4-5b83-4fc7-80c6-4f76393f7a1c"/>
+							<textFieldExpression><![CDATA[$V{descripcion_COUNT_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="60" height="20" rowTotalGroup="descripProducto" columnTotalGroup="descripcion">
+					<cellContents mode="Opaque" style="Crosstab_CT">
+						<textField>
+							<reportElement x="0" y="0" width="60" height="20" forecolor="#FFFFFF" uuid="d2a4ee43-5a57-4bee-b5da-6529bd54b29c"/>
+							<textFieldExpression><![CDATA[$V{descripcion_COUNT_MEASURE}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+			</crosstab>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
